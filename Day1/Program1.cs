@@ -10,6 +10,7 @@ class Program1
 
         if (int.TryParse(input, out int age))
         {
+            // TryParse is used to avoid runtime error, in case the input is not an integer (in this case)
             bool isAdult = age >= 18;
             Console.WriteLine("Adult? " + isAdult);
         }
