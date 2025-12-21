@@ -1,22 +1,32 @@
+﻿using System;
 
-
-using System;
-
-class Program1
+class Program
 {
     static void Main()
     {
-        Console.Write("Enter age: ");
-        string? input = Console.ReadLine();
+        int n = 100;
+        bool[] isPrime = new bool[n + 1];
 
-        if (int.TryParse(input, out int age))
+        for (int i = 3; i <= n; i += 2)
+            isPrime[i] = true;
+
+        isPrime[2] = true;
+
+        for (int i = 3; i * i <= n; i += 2)
         {
-            bool isAdult = age >= 18;
-            Console.WriteLine("Adult? " + isAdult);
+            if (isPrime[i])
+            {
+                for (int j = i * i; j <= n; j += 2 * i)
+                    isPrime[j] = false;
+            }
+
         }
-        else
+
+        Console.Write("2 ");
+        for (int i = 3; i <= n; i += 2)
         {
-            Console.WriteLine("Invalid age. Please enter a whole number.");
+            if (isPrime[i])
+                Console.Write(i + " ");
         }
     }
 }
