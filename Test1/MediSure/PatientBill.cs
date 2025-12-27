@@ -1,0 +1,25 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+
+namespace MediSure;
+
+public class PatientBill
+{
+    
+    #region Properties
+    public string BillId { get; set; }
+    public string PatientName { get; set; }
+    public bool HasInsurance { get; set; }
+    public decimal ConsultationFee { get; set; }
+    public decimal LabCharges { get; set; }
+    public decimal MedicineCharges { get; set; }
+    public decimal GrossAmount;
+    public decimal DiscountAmount;
+    public decimal FinalPayable;
+
+    #endregion
+    
+
+
+    
+}
