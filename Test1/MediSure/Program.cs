@@ -16,13 +16,17 @@ class Program
 4. 4. Exit*/
         int choice;
         do{
+            Console.ForegroundColor = ConsoleColor.Green;
             System.Console.WriteLine("================== MediSure Clinic Billing ==================");
             System.Console.WriteLine("1. Create New Bill (Enter Patient Details)");
             System.Console.WriteLine("2. View Last Bill");
             System.Console.WriteLine("3. Clear Last Bill");
             System.Console.WriteLine("4. Exit");
             System.Console.Write("Enter your option: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            
             choice = Int32.Parse(Console.ReadLine());
+            
 
             switch (choice)
             {
@@ -61,4 +65,5 @@ class Program
 
         
     
+
 }
