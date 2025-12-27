@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml.Serialization;
 namespace MediSure;
 
 class Program
@@ -67,3 +66,4 @@ class Program
     
 
 }
+
