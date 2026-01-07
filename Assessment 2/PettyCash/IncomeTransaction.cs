@@ -9,7 +9,8 @@ public class IncomeTransaction : Transaction, IReportable
 
     public override string GetSummary()
     {
-        return $"Expense : {Date.ToShortDateString()} | {Amount} | Category: {Source}";
+        return $"Expense : {Date.ToShortDateString()} | {Amount} | Source: {Source}";
     }
+
 
 }
