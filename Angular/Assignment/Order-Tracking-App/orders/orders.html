@@ -1,0 +1,22 @@
+
+<h2 class="title">Orders List</h2>
+
+<table class="orders-table">
+
+<tr>
+<th>ID</th>
+<th>Product</th>
+<th>Price</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+<tr *ngFor="let order of orders">
+<td>{{order.id}}</td>
+<td>{{order.product}}</td>
+<td>{{order.price | currency:'INR'}}</td>
+<td>{{order.date | date:'mediumDate'}}</td>
+<td>{{ order.status | orderStatus }}</td>
+</tr>
+
+</table>
